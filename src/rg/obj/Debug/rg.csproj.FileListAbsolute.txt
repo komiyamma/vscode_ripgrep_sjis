@@ -1,0 +1,6 @@
+C:\Users\master\source\repos\rg\rg\obj\Debug\rg.csproj.CoreCompileInputs.cache
+C:\Users\master\source\repos\rg\rg\bin\Debug\rg.exe.config
+C:\Users\master\source\repos\rg\rg\bin\Debug\rg.exe
+C:\Users\master\source\repos\rg\rg\bin\Debug\rg.pdb
+C:\Users\master\source\repos\rg\rg\obj\Debug\rg.exe
+C:\Users\master\source\repos\rg\rg\obj\Debug\rg.pdb
