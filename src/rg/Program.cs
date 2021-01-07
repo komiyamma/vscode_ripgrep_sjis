@@ -57,7 +57,7 @@ internal class RipGrepCommandLine
     List<String> arg_list = null;
     List<String> arg_list_head_for_sjis = new List<String> { "-E", "sjis" };
 
-    const String rg_utf8_name = "rg_utf8.exe";
+    const String rg_utf8_name = "/rg_utf8.exe";
 
     public RipGrepCommandLine(String[] args)
     {
