@@ -145,7 +145,7 @@ internal class RipGrepCommandLine
             {
                 lock (hit_string_dictionary)
                 {
-                    // 今度は、まだ登録されていない時だけ、SJIS版を吐き出す
+                    // まだ登録されていない時だけ、出力
                     if (!hit_string_dictionary.ContainsKey(data))
                     {
                         hit_string_dictionary.Add(data, true);
