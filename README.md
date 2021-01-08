@@ -13,7 +13,10 @@
 「vscode\resources\app\node_modules.asar.unpacked\vscode-ripgrep\bin」 フォルダにある  
 「rg.exe」→ 「rg_utf8.exe」と名前を変更。
 1. 「rg_sjis.exe」を「rg.exe」へと名前を変更して 同じディレクトリへと入れる。
-　
+
+# Visual Studio Code のバージョンを更新すると...
+- 更新する度に、「rg.exe」が上書きされてしまうため、同じことをする必要あり。
+
 # 備考
 - Visual Studio Code にて「ファイル」→「ユーザー設定」→「設定」で、  
 検索欄に「guess」と入れて「Auto Guess Encoding」に「チェック」を入れることを推奨。  
