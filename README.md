@@ -1,4 +1,4 @@
-# Visual Studio Code の Grep で SJIS ファイルもヒットするようにする
+# Visual Studio Code の Grep で SJIS も ヒットするように
 - vscode で grep すると、utf8とsjisが混じったファイル群だと、sjis が検知できない。
 そこで検知できるようにしたもの。  
 
