@@ -76,8 +76,11 @@ internal class RipGrepCommandLine
     {
         if (enc == Encoding.GetEncoding(932))
         {
-            arg_list.Insert(0, "sjis");
-            arg_list.Insert(0, "-E");
+            // sjisオプション側を先頭にして
+            arg_list_head_for_sjis.AddRange(arg_list);
+
+            // 元のリストとする。
+            arg_list = arg_list_head_for_sjis;
         }
 
         string arg_line = arg_list.EncodeCommandLineValues();
