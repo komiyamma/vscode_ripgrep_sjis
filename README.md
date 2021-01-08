@@ -8,7 +8,7 @@
 2. .NET Framework 4.5 以上
 
 # 使い方
-1. rg_sjis.zip を ダウンロードして、解凍し、rg_sjis.exe を得る。  
+1. [rg_sjis.zip](https://github.com/komiyamma/vscode_ripgrep_sjis/releases) を ダウンロードして、解凍し、rg_sjis.exe を得る。  
 1. Visual Studio Code の  インストールフォルダから辿って  
 「vscode\resources\app\node_modules.asar.unpacked\vscode-ripgrep\bin」 フォルダにある  
 「rg.exe」→ 「rg_utf8.exe」と名前を変更。
