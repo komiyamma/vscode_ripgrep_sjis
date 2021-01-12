@@ -5,7 +5,7 @@
 
 # 動作環境
 1. Windows系。Win7以降くらいじゃないかな。多分。
-2. .NET Framework 4.5 以上
+2. .NET Framework 4.5.2 以上
 
 # 使い方
 1. [rg_sjis.zip](https://github.com/komiyamma/vscode_ripgrep_sjis/releases) を ダウンロードして、解凍し、rg_sjis.exe を得る。  
