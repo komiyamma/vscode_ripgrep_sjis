@@ -1,4 +1,4 @@
-[![rg_sjis v2.0.1](https://img.shields.io/badge/rg_sjis-v2.0.1-6479ff.svg)](https://github.com/komiyamma/vscode_ripgrep_sjis/releases)
+[![rg_sjis v2.1.0.1](https://img.shields.io/badge/rg_sjis-v2.1.0-6479ff.svg)](https://github.com/komiyamma/vscode_ripgrep_sjis/releases)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 # Visual Studio Code の Grep で SJIS も ヒットするように
@@ -11,6 +11,10 @@
 2. .NET Framework 4.5.2 以上
 
 # 使い方
+- **自動**で入れる場合
+1. 単純に「rg_sjis.exe」をダブルクリックして実行
+
+- **手作業**で入れる場合
 1. [rg_sjis.zip](https://github.com/komiyamma/vscode_ripgrep_sjis/releases) を ダウンロードして、解凍し、rg_sjis.exe を得る。  
 1. Visual Studio Code の  インストールフォルダから辿って  
 「vscode\resources\app\node_modules.asar.unpacked\vscode-ripgrep\bin」 フォルダにある  
