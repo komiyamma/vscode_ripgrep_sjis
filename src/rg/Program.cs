@@ -145,7 +145,7 @@ internal class RipGrepCommandLine
     {
         dynamic document = Newtonsoft.Json.JsonConvert.DeserializeObject(data);
         String s = document.data?.path?.text;
-        string l = document.data?.line_number;
+        String l = document.data?.line_number;
         if (s != null && l != null)
         {
             var t = Tuple.Create<String, String>(s, l);
