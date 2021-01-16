@@ -12,7 +12,8 @@
 
 # 使い方
 - **自動**で入れる場合
-1. 単純に「rg_sjis.exe」をダブルクリックして実行
+1. [rg_sjis.zip](https://github.com/komiyamma/vscode_ripgrep_sjis/releases) を ダウンロードして、解凍し、rg_sjis.exe を得る。  
+1. 「rg_sjis.exe」をダブルクリックして実行
 
 - **手作業**で入れる場合
 1. [rg_sjis.zip](https://github.com/komiyamma/vscode_ripgrep_sjis/releases) を ダウンロードして、解凍し、rg_sjis.exe を得る。  
