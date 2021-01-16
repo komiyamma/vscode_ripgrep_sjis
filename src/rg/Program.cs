@@ -165,11 +165,12 @@ internal class RipGrepCommandLine
             {
                 lock (hit_string_dictionary)
                 {
-                    // まだ登録されていない時だけ、出力
+                    // まだ登録されていない時だけ、出力候補となる
                     if (!hit_string_dictionary.ContainsKey(data))
                     {
                         if (enc == Encoding.UTF8)
                         {
+                            // utf8の時のファイルのパスと行を控えておく
                             hit_string_dictionary.Add(data, true);
                             Console.WriteLine(data);
 
@@ -185,6 +186,8 @@ internal class RipGrepCommandLine
                             var t = GetHitPathAndLine(data);
                             if (t.Item1 != null && t.Item2 != null)
                             {
+                                // utf8の時にファイルのパスと行がすでにヒットしていたら、sjisはその行は表示しない。(半角英数でヒットしたのだろう)
+                                // ヒットしていなければ表示
                                 if (!hit_path_line_dictionary.ContainsKey(t))
                                 {
                                     Console.WriteLine(data);
