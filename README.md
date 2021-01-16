@@ -1,4 +1,4 @@
-[![rg_sjis v2.0.1](https://img.shields.io/badge/rg_sjis-v2.0.1-6479ff.svg)](rg_sjis_v2.0.1)
+[![rg_sjis v2.0.1](https://img.shields.io/badge/rg_sjis-v2.0.1-6479ff.svg)](https://github.com/komiyamma/vscode_ripgrep_sjis/releases)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 # Visual Studio Code の Grep で SJIS も ヒットするように
