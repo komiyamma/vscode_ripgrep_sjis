@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\repogitory\\vscode_ripgrep_sjis\\src\\rg_sjis\\rg_sjis.csproj": {}
+  },
+  "projects": {
+    "G:\\repogitory\\vscode_ripgrep_sjis\\src\\rg_sjis\\rg_sjis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\repogitory\\vscode_ripgrep_sjis\\src\\rg_sjis\\rg_sjis.csproj",
+        "projectName": "rg_sjis",
+        "projectPath": "G:\\repogitory\\vscode_ripgrep_sjis\\src\\rg_sjis\\rg_sjis.csproj",
+        "packagesPath": "C:\\Users\\master\\.nuget\\packages\\",
+        "outputPath": "G:\\repogitory\\vscode_ripgrep_sjis\\src\\rg_sjis\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\master\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

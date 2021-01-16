@@ -16,6 +16,7 @@ using System.IO;
 
 
 
+
 internal static class StringEncodeExtension
 {
     public static string EncodeCommandLineValue(this string value)
@@ -51,13 +52,16 @@ internal static class StringEncodeExtension
 internal class RipGrepCommandLine
 {
     static Dictionary<String, bool> hit_string_dictionary = new Dictionary<String, Boolean>();
+    static Dictionary<Tuple<String, String>, bool> hit_path_line_dictionary = new Dictionary<Tuple<String, String>, Boolean>();
 
     Process process =  new Process();
 
     List<String> arg_list = null;
     List<String> arg_list_head_for_sjis = new List<String> { "-E", "sjis" };
 
-    const String rg_utf8_name = "/rg_utf8.exe";
+    const String rg_utf8_name = "rg_utf8.exe";
+
+    Encoding enc; 
 
     public RipGrepCommandLine(String[] args)
     {
@@ -68,12 +72,13 @@ internal class RipGrepCommandLine
 
         //起動するファイルを指定する
         var self = Assembly.GetExecutingAssembly().Location;
-        process.StartInfo.FileName = Path.GetDirectoryName(self) + rg_utf8_name;
+        process.StartInfo.FileName = Path.GetDirectoryName(self) + '/' + rg_utf8_name;
 
     }
 
     string MakeArgsString(Encoding enc)
     {
+        this.enc = enc;
         if (enc == Encoding.GetEncoding(932))
         {
             // sjisオプション側を先頭にして
@@ -136,6 +141,21 @@ internal class RipGrepCommandLine
 
     }
 
+    private Tuple<String, String> GetHitPathAndLine(String data)
+    {
+        dynamic document = Newtonsoft.Json.JsonConvert.DeserializeObject(data);
+        String s = document.data?.path?.text;
+        string l = document.data?.line_number;
+        if (s != null && l != null)
+        {
+            var t = Tuple.Create<String, String>(s, l);
+            return t;
+        }
+
+        var n = Tuple.Create<String, String>(null, null);
+        return n;
+    }
+
     private void proc_OutputDataReceived(object sender, DataReceivedEventArgs ev)
     {
         String data = ev.Data;
@@ -148,8 +168,29 @@ internal class RipGrepCommandLine
                     // まだ登録されていない時だけ、出力
                     if (!hit_string_dictionary.ContainsKey(data))
                     {
-                        hit_string_dictionary.Add(data, true);
-                        Console.WriteLine(data);
+                        if (enc == Encoding.UTF8)
+                        {
+                            hit_string_dictionary.Add(data, true);
+                            Console.WriteLine(data);
+
+                            var t = GetHitPathAndLine(data);
+                            if (t.Item1 != null && t.Item2 != null)
+                            {
+                                hit_path_line_dictionary.Add(t, true);
+                            }
+                        }
+
+                        if (enc == Encoding.GetEncoding(932))
+                        {
+                            var t = GetHitPathAndLine(data);
+                            if (t.Item1 != null && t.Item2 != null)
+                            {
+                                if (!hit_path_line_dictionary.ContainsKey(t))
+                                {
+                                    Console.WriteLine(data);
+                                }
+                            }
+                        }
                     }
                 }
             }

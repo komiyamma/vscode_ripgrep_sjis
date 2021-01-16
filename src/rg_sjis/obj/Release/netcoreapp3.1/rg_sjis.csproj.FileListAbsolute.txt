@@ -1,0 +1,13 @@
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\obj\Release\netcoreapp3.1\rg_sjis.csprojAssemblyReference.cache
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\obj\Release\netcoreapp3.1\rg_sjis.AssemblyInfoInputs.cache
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\obj\Release\netcoreapp3.1\rg_sjis.AssemblyInfo.cs
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\obj\Release\netcoreapp3.1\rg_sjis.csproj.CoreCompileInputs.cache
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\bin\Release\netcoreapp3.1\rg_sjis.exe
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\bin\Release\netcoreapp3.1\rg_sjis.deps.json
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\bin\Release\netcoreapp3.1\rg_sjis.runtimeconfig.json
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\bin\Release\netcoreapp3.1\rg_sjis.runtimeconfig.dev.json
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\bin\Release\netcoreapp3.1\rg_sjis.dll
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\bin\Release\netcoreapp3.1\rg_sjis.pdb
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\obj\Release\netcoreapp3.1\rg_sjis.dll
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\obj\Release\netcoreapp3.1\rg_sjis.pdb
+G:\repogitory\vscode_ripgrep_sjis\src\rg_sjis\obj\Release\netcoreapp3.1\rg_sjis.genruntimeconfig.cache
