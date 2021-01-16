@@ -217,12 +217,18 @@ public class RG
 {
     public static void Main(String[] args)
     {
-        Console.OutputEncoding = Encoding.UTF8;
+        if (args.Length <= 3) {
+            Installer.Program.Install();
+        } else
+        {
+            Console.OutputEncoding = Encoding.UTF8;
 
-        RipGrepCommandLine rgcl1 = new RipGrepCommandLine(args);
-        rgcl1.Grep(Encoding.UTF8);
+            RipGrepCommandLine rgcl1 = new RipGrepCommandLine(args);
+            rgcl1.Grep(Encoding.UTF8);
 
-        RipGrepCommandLine rgcl2 = new RipGrepCommandLine(args);
-        rgcl2.Grep(Encoding.GetEncoding(932));
+            RipGrepCommandLine rgcl2 = new RipGrepCommandLine(args);
+            rgcl2.Grep(Encoding.GetEncoding(932));
+
+        }
     }
 }

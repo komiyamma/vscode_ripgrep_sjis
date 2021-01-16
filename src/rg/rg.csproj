@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Installer.cs" />
     <Compile Include="JSON\Bson\BsonBinaryType.cs" />
     <Compile Include="JSON\Bson\BsonBinaryWriter.cs" />
     <Compile Include="JSON\Bson\BsonObjectId.cs" />

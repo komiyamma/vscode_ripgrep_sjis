@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // 制御されます。アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更します。
-[assembly: AssemblyTitle("rg_sjis")]
-[assembly: AssemblyDescription("Visual Studio Code の Grep 検索を SJIS対応")]
+[assembly: AssemblyTitle("rg_installer")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Visual Studio Code の Grep 検索を SJIS対応")]
-[assembly: AssemblyCopyright("Copyright © 2021 Akitsugu Komiyama")]
+[assembly: AssemblyProduct("rg_installer")]
+[assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,17 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
-[assembly: Guid("422ca314-5551-4fd4-8fc3-1f3757b8dd02")]
+[assembly: Guid("e07ec692-8daa-4c47-b816-640d7d27d668")]
 
-[assembly: AssemblyVersion("2.1.0.1")]
-[assembly: AssemblyFileVersion("2.1.0.1")]
+// アセンブリのバージョン情報は次の 4 つの値で構成されています:
+//
+//      メジャー バージョン
+//      マイナー バージョン
+//      ビルド番号
+//      リビジョン
+//
+// すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
+// 既定値にすることができます:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
