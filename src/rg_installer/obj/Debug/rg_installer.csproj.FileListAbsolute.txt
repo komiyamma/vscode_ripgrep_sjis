@@ -1,6 +1,0 @@
-G:\repogitory\vscode_ripgrep_sjis\src\rg_installer\bin\Debug\rg_installer.exe.config
-G:\repogitory\vscode_ripgrep_sjis\src\rg_installer\bin\Debug\rg_installer.exe
-G:\repogitory\vscode_ripgrep_sjis\src\rg_installer\bin\Debug\rg_installer.pdb
-G:\repogitory\vscode_ripgrep_sjis\src\rg_installer\obj\Debug\rg_installer.csproj.CoreCompileInputs.cache
-G:\repogitory\vscode_ripgrep_sjis\src\rg_installer\obj\Debug\rg_installer.exe
-G:\repogitory\vscode_ripgrep_sjis\src\rg_installer\obj\Debug\rg_installer.pdb
