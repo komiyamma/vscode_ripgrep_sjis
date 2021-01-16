@@ -1,5 +1,5 @@
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![rg_sjis v2.0.1](https://img.shields.io/badge/rg_sjis-v2.0.1-6479ff.svg)](rg_sjis_v2.0.1)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 # Visual Studio Code の Grep で SJIS も ヒットするように
 - Visual Studio Code で grep すると、utf8とsjisが混じったファイル群だと、sjis が検知できない。
