@@ -60,8 +60,11 @@ internal class RipGrepCommandLine
 
     Encoding enc;
 
-    public RipGrepCommandLine(string[] args)
+    bool is_search_mode = true;
+
+    public RipGrepCommandLine(string[] args, bool search_mode)
     {
+        is_search_mode = search_mode;
         if (arg_list == null)
         {
             arg_list = new List<string>(args);
@@ -171,10 +174,13 @@ internal class RipGrepCommandLine
                             hit_string_dictionary.Add(data, true);
                             Console.WriteLine(data);
 
-                            var t = GetHitPathAndLine(data);
-                            if (t.Item1 != null && t.Item2 != null)
+                            if (is_search_mode)
                             {
-                                hit_path_line_dictionary.Add(t, true);
+                                var t = GetHitPathAndLine(data);
+                                if (t.Item1 != null && t.Item2 != null)
+                                {
+                                    hit_path_line_dictionary.Add(t, true);
+                                }
                             }
                         }
 
@@ -214,20 +220,40 @@ public class RG
 {
     public static void Main(string[] args)
     {
-        if (args.Length <= 3)
+        Console.WriteLine(args.Length);
+        if (args.Length == 0)
         {
             Installer.Program.Install();
         }
         else
         {
-            Console.OutputEncoding = Encoding.UTF8;
+            bool search_mode = false;
+            foreach (var s in args)
+            {
+                if (s.Contains(@".code-search"))
+                {
+                    search_mode = true;
+                }
+            }
+            // サーチモードだ
+            if (search_mode)
+            {
+                Console.OutputEncoding = Encoding.UTF8;
 
-            RipGrepCommandLine rgcl1 = new RipGrepCommandLine(args);
-            rgcl1.Grep(Encoding.UTF8);
+                RipGrepCommandLine rgcl1 = new RipGrepCommandLine(args, search_mode);
+                rgcl1.Grep(Encoding.UTF8);
 
-            RipGrepCommandLine rgcl2 = new RipGrepCommandLine(args);
-            rgcl2.Grep(Encoding.GetEncoding(932));
+                RipGrepCommandLine rgcl2 = new RipGrepCommandLine(args, search_mode);
+                rgcl2.Grep(Encoding.GetEncoding(932));
+            }
+            // いろいろな瞬間呼び出されている。
+            else
+            {
+                Console.OutputEncoding = Encoding.UTF8;
 
+                RipGrepCommandLine rgcl1 = new RipGrepCommandLine(args, search_mode);
+                rgcl1.Grep(Encoding.UTF8);
+            }
         }
     }
 }

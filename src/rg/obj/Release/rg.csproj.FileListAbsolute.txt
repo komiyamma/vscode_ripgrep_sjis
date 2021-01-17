@@ -8,4 +8,3 @@ G:\repogitory\vscode_ripgrep_sjis\src\rg\bin\Release\rg_sjis.exe.config
 G:\repogitory\vscode_ripgrep_sjis\src\rg\bin\Release\rg_sjis.exe
 G:\repogitory\vscode_ripgrep_sjis\src\rg\obj\Release\rg.csproj.CoreCompileInputs.cache
 G:\repogitory\vscode_ripgrep_sjis\src\rg\obj\Release\rg_sjis.exe
-G:\repogitory\vscode_ripgrep_sjis\src\rg\obj\Release\rg.csprojAssemblyReference.cache
