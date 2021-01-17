@@ -3,6 +3,7 @@
  * under the MIT License
  */
 
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,10 +12,6 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
-
-
-
-
 
 
 internal static class StringEncodeExtension
@@ -51,19 +48,19 @@ internal static class StringEncodeExtension
 
 internal class RipGrepCommandLine
 {
-    static Dictionary<String, bool> hit_string_dictionary = new Dictionary<String, Boolean>();
-    static Dictionary<Tuple<String, String>, bool> hit_path_line_dictionary = new Dictionary<Tuple<String, String>, Boolean>();
+    static Dictionary<string, bool> hit_string_dictionary = new Dictionary<string, bool>();
+    static Dictionary<Tuple<string, string>, bool> hit_path_line_dictionary = new Dictionary<Tuple<string, string>, bool>();
 
-    Process process =  new Process();
+    Process process = new Process();
 
-    List<String> arg_list = null;
-    List<String> arg_list_head_for_sjis = new List<String> { "-E", "sjis" };
+    List<string> arg_list = null;
+    List<string> arg_list_head_for_sjis = new List<string> { "-E", "sjis" };
 
-    const String rg_utf8_name = "rg_utf8.exe";
+    const string rg_utf8_name = "rg_utf8.exe";
 
-    Encoding enc; 
+    Encoding enc;
 
-    public RipGrepCommandLine(String[] args)
+    public RipGrepCommandLine(string[] args)
     {
         if (arg_list == null)
         {
@@ -141,24 +138,24 @@ internal class RipGrepCommandLine
 
     }
 
-    private Tuple<String, String> GetHitPathAndLine(String data)
+    private Tuple<string, string> GetHitPathAndLine(string data)
     {
         dynamic document = Newtonsoft.Json.JsonConvert.DeserializeObject(data);
-        String s = document.data?.path?.text;
-        String l = document.data?.line_number;
+        string s = document.data?.path?.text;
+        string l = document.data?.line_number;
         if (s != null && l != null)
         {
-            var t = Tuple.Create<String, String>(s, l);
+            var t = Tuple.Create<string, string>(s, l);
             return t;
         }
 
-        var n = Tuple.Create<String, String>(null, null);
+        var n = Tuple.Create<string, string>(null, null);
         return n;
     }
 
     private void proc_OutputDataReceived(object sender, DataReceivedEventArgs ev)
     {
-        String data = ev.Data;
+        string data = ev.Data;
         try
         {
             if (data != null)
@@ -215,11 +212,13 @@ internal class RipGrepCommandLine
 
 public class RG
 {
-    public static void Main(String[] args)
+    public static void Main(string[] args)
     {
-        if (args.Length <= 3) {
+        if (args.Length <= 3)
+        {
             Installer.Program.Install();
-        } else
+        }
+        else
         {
             Console.OutputEncoding = Encoding.UTF8;
 

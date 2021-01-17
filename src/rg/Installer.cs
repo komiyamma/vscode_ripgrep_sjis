@@ -1,8 +1,15 @@
-﻿using System;
+﻿/*
+ * Copyright (C) 2021 Akitsugu Komiyama
+ * under the MIT License
+ */
+
+
+using System;
 using System.Diagnostics;
 using System.Text;
 using System.IO;
 using System.Reflection;
+
 
 namespace Installer
 {
