@@ -11,14 +11,15 @@ using System.IO;
 using System.Reflection;
 
 
-namespace Installer
+namespace RipGrep
 {
-    class Program
+    internal class Installer
     {
         public static void Install()
         {
             try
             {
+                RgHelpConsoleOutput();
 
                 Process process = new Process();
 
@@ -62,6 +63,25 @@ namespace Installer
             {
                 Trace.WriteLine(ex.Message);
             }
+        }
+
+        private static void RgHelpConsoleOutput()
+        {
+            // 先にデフォルトの出力と同じものを出しておく
+            Console.WriteLine(@"
+error: The following required arguments were not provided:
+    <PATTERN>
+
+USAGE:
+
+    rg [OPTIONS] PATTERN [PATH ...]
+    rg [OPTIONS] [-e PATTERN ...] [-f PATTERNFILE ...] [PATH ...]
+    rg [OPTIONS] --files [PATH ...]
+    rg [OPTIONS] --type-list
+    command | rg [OPTIONS] PATTERN
+
+For more information try --help
+");
         }
 
         private static void proc_OutputDataReceived(object sender, DataReceivedEventArgs ev)
@@ -109,7 +129,6 @@ namespace Installer
             }
 
         }
-
 
         private static void proc_ErrorDataReceived(object sender, DataReceivedEventArgs ev)
         {
