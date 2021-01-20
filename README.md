@@ -1,4 +1,4 @@
-[![rg_sjis v2.3.0.1](https://img.shields.io/badge/rg_sjis-v2.3.0-6479ff.svg)](https://github.com/komiyamma/vscode_ripgrep_sjis/releases)
+[![rg_sjis v2.5.0.1](https://img.shields.io/badge/rg_sjis-v2.5.0-6479ff.svg)](https://github.com/komiyamma/vscode_ripgrep_sjis/releases)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 ![Windows Only](https://img.shields.io/badge/Windows-Only-6479ff.svg)
 ![.NET Framework 4.5.2](https://img.shields.io/badge/.NET_Framework-v4.5.2-6479ff.svg)
