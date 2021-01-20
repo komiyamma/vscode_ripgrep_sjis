@@ -1,5 +1,5 @@
 [![rg_sjis v2.3.0.1](https://img.shields.io/badge/rg_sjis-v2.3.0-6479ff.svg)](https://github.com/komiyamma/vscode_ripgrep_sjis/releases)
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 # Visual Studio Code の Grep で SJIS も ヒットするように
 - Visual Studio Code で grep すると、utf8とsjisが混じったファイル群だと、sjis が検知できない。
