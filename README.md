@@ -4,7 +4,7 @@
 # Visual Studio Code の Grep で SJIS も ヒットするように
 - Visual Studio Code で grep すると、utf8とsjisが混じったファイル群だと、sjis が検知できない。
 そこで検知できるようにしたもの。  
-- なお、Visual Studio CodeのExtentionとして機能するものは「1. [vscode_ripgrep_sjis_extension リポジトリ](https://github.com/komiyamma/vscode_ripgrep_sjis_extension/releases) 」にて「rg-sjis-***.vsix」として提供しています。
+- なお、Visual Studio CodeのExtentionとして機能するものは「[vscode_ripgrep_sjis_extension リポジトリ](https://github.com/komiyamma/vscode_ripgrep_sjis_extension/releases) 」にて「rg-sjis-***.vsix」として提供しています。
 
 # 動作環境
 1. Windows系。Win7以降くらいじゃないかな。多分。
