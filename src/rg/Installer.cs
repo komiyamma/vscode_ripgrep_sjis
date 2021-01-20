@@ -15,8 +15,11 @@ namespace RipGrep
 {
     internal class Installer
     {
-        public static void Install()
+        static string m_vscode_path = "";
+        public static void Install(string vscode_path="")
         {
+            m_vscode_path = vscode_path;
+
             try
             {
                 RgHelpConsoleOutput();
@@ -87,6 +90,10 @@ For more information try --help
         private static void proc_OutputDataReceived(object sender, DataReceivedEventArgs ev)
         {
             string line = ev.Data;
+            if (m_vscode_path != "")
+            {
+                line = Path.GetDirectoryName(m_vscode_path) + "/bin/code.cmd";
+            }
             if (File.Exists(line))
             {
                 string basePath = Path.GetDirectoryName(line);

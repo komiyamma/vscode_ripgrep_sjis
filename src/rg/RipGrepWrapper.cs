@@ -16,9 +16,13 @@ namespace RipGrep
             {
                 RipGrep.Installer.Install();
             }
-            else if (args.Length == 1 && args[0] == "--mode-uninstall")
+            else if (args.Length == 2 && args[0] == "--mode-install")
             {
-                RipGrep.UnInstaller.UnInstall();
+                RipGrep.Installer.Install(args[1]);
+            }
+            else if (args.Length == 2 && args[0] == "--mode-uninstall")
+            {
+                RipGrep.UnInstaller.UnInstall(args[1]);
             }
             else
             {
