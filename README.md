@@ -1,6 +1,6 @@
 [![rg_sjis v2.5.0.1](https://img.shields.io/badge/rg_sjis-v2.5.0-6479ff.svg)](https://github.com/komiyamma/vscode_ripgrep_sjis/releases)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
-![Windows Only](https://img.shields.io/badge/Windows-Only-6479ff.svg)
+![Windows 7,8,10](https://img.shields.io/badge/Windows-7,8,10-6479ff.svg)
 ![.NET Framework 4.5.2](https://img.shields.io/badge/.NET_Framework-v4.5.2-6479ff.svg)
 
 # Visual Studio Code の Grep で SJIS も ヒットするように
@@ -9,7 +9,7 @@
 - なお、**Visual Studio CodeのExtentionとして機能するものは「[VSCode MarketPlace](https://marketplace.visualstudio.com/items?itemName=komiyamma.rg-sjis) 」にて公開**しています。
 
 # 動作環境
-1. Windows系。Win7以降くらいじゃないかな。多分。
+1. MS-Windows
 2. .NET Framework 4.5.2 以上
 3. Visual Studio Code にパスが通っていること(「code.cmd」があるフォルダ)
 
