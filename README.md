@@ -6,7 +6,7 @@
 # Visual Studio Code の Grep で SJIS も ヒットするように
 - Visual Studio Code で grep すると、utf8とsjisが混じったファイル群だと、sjis が検知できない。
 そこで検知できるようにしたもの。  
-- なお、**Visual Studio CodeのExtentionとして機能するものは「[VSCode MarketPlace](https://marketplace.visualstudio.com/items?itemName=komiyamma.rg-sjis) 」にて公開しています。
+- なお、**Visual Studio CodeのExtentionとして機能するものは「[VSCode MarketPlace](https://marketplace.visualstudio.com/items?itemName=komiyamma.rg-sjis) 」にて公開**しています。
 
 # 動作環境
 1. Windows系。Win7以降くらいじゃないかな。多分。
