@@ -12,10 +12,13 @@ namespace RipGrep
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(args.Length);
             if (args.Length == 0)
             {
                 RipGrep.Installer.Install();
+            }
+            else if (args.Length == 1 && args[0] == "--mode-uninstall")
+            {
+                RipGrep.UnInstaller.UnInstall();
             }
             else
             {

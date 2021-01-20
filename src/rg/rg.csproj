@@ -262,6 +262,7 @@
     <Compile Include="RipGrepMultiEncode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RipGrepWrapper.cs" />
+    <Compile Include="Uninstaller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

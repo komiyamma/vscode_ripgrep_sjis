@@ -13,9 +13,9 @@ using System.Reflection;
 
 namespace RipGrep
 {
-    internal class Installer
+    internal class UnInstaller
     {
-        public static void Install()
+        public static void UnInstall()
         {
             try
             {
@@ -99,38 +99,27 @@ For more information try --help
                 {
                     string rgFullDir = Path.GetDirectoryName(rgFullPath);
                     string rgUTF8FullPath = rgFullDir + @"\rg_utf8.exe";
-                    string myProgramFullPath = Assembly.GetExecutingAssembly().Location;
-                    FileInfo fiSjis = new FileInfo(myProgramFullPath);
-                    if (fiRg.Length != fiSjis.Length)
+
+                    // utf8版とsjis版の両方がある
+                    if (File.Exists(rgUTF8FullPath) && File.Exists(rgFullPath))
                     {
 
                         try
                         {
-                            File.Move(rgFullPath, rgUTF8FullPath);
-                        }
-                        catch (Exception e)
-                        {
+                            File.Copy(rgUTF8FullPath, rgFullPath, true); // 上書き保存
 
-                        }
-                        try
-                        {
-                            File.Copy(myProgramFullPath, rgFullPath, true); // 上書き保存
-                            if (File.Exists(rgUTF8FullPath))
+                            // 成功した場合だけ削除
+                            try
                             {
-                                Console.WriteLine("RgSJISInstallSuccess");
+                                File.Delete(rgUTF8FullPath); // 削除
+                                Console.WriteLine("RgSJISUninstallSuccess");
+                            }
+                            catch (Exception e)
+                            {
                             }
                         }
                         catch (Exception e)
                         {
-
-                        }
-                    }
-                    // 同じファイルであるため、コピー処理を停止。
-                    else
-                    {
-                        if (File.Exists(rgUTF8FullPath))
-                        {
-                            Console.WriteLine("RgSJISInstallSuccess");
                         }
                     }
                 }
