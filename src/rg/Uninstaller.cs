@@ -24,42 +24,49 @@ namespace RipGrep
             {
                 RgHelpConsoleOutput();
 
-                Process process = new Process();
+                // int count = JidgeVisualStudioMultiple.GetVisualStudioCodeLaunchCount(m_vscode_path);
+                // System.Diagnostics.Trace.WriteLine(count);
 
-                process.StartInfo.FileName = System.Environment.GetEnvironmentVariable("ComSpec");
-                process.StartInfo.Arguments = "/c where code.cmd";
-
-                process.StartInfo.CreateNoWindow = true;
-                process.StartInfo.UseShellExecute = false;
-
-                //イベントハンドラの追加
-                process.StartInfo.RedirectStandardError = true;
-                process.StartInfo.RedirectStandardOutput = true;
-
-                process.StartInfo.StandardOutputEncoding = Encoding.UTF8;
-                process.StartInfo.StandardErrorEncoding = Encoding.UTF8;
-
-                process.ErrorDataReceived += proc_ErrorDataReceived;
-                process.OutputDataReceived += proc_OutputDataReceived;
-
-
-                //起動する
-                process.Start();
-                process.BeginOutputReadLine();
-
-                process.WaitForExit();
-
-                try
+                // VSCodeが複数起動されていない場合のみアンインストールを行う
+                if (/*count <= 1*/ true)
                 {
-                    if (process != null)
+                    Process process = new Process();
+
+                    process.StartInfo.FileName = System.Environment.GetEnvironmentVariable("ComSpec");
+                    process.StartInfo.Arguments = "/c where code.cmd";
+
+                    process.StartInfo.CreateNoWindow = true;
+                    process.StartInfo.UseShellExecute = false;
+
+                    //イベントハンドラの追加
+                    process.StartInfo.RedirectStandardError = true;
+                    process.StartInfo.RedirectStandardOutput = true;
+
+                    process.StartInfo.StandardOutputEncoding = Encoding.UTF8;
+                    process.StartInfo.StandardErrorEncoding = Encoding.UTF8;
+
+                    process.ErrorDataReceived += proc_ErrorDataReceived;
+                    process.OutputDataReceived += proc_OutputDataReceived;
+
+
+                    //起動する
+                    process.Start();
+                    process.BeginOutputReadLine();
+
+                    process.WaitForExit();
+
+                    try
                     {
-                        process.Close();
-                        process.Kill();
+                        if (process != null)
+                        {
+                            process.Close();
+                            process.Kill();
+                        }
                     }
-                }
-                catch
-                {
+                    catch
+                    {
 
+                    }
                 }
             }
             catch (Exception ex)
